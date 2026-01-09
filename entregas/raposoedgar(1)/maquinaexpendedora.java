@@ -17,13 +17,18 @@ public class MaquinaExpendedora {
 
         
         while (true) {
-            System.out.println(); // Separador
-            System.out.println("Productos Disponibles");
+            boolean salir = false;
+
+            while (!salir) {
+              System.out.println();
+              System.out.println("Productos disponibles");
             for (int i = 0; i < prods.length; i++) {
-                System.out.println((i + 1) + ". " + prods[i] + " | Precio: " + precios[i] + "eur | Stock: " + stock[i]);
-            }
-            
-            System.out.println(); // Separador
+               System.out.println("%d. %s | Precio: %.2f € | Stock: %d%n",
+                                 i + 1, prods[i], precios[i], stock[i]);
+    }
+
+           System.out.println();
+
             
             System.out.println("Saldo actual: " + ((int) saldo * 100) / 100 + " euros (Max. " + max_saldo_maq + "eur)");
             System.out.print("[1] Insertar moneda (Validas: ");
