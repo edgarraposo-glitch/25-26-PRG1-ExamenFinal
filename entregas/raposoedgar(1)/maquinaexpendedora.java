@@ -45,15 +45,16 @@ public class MaquinaExpendedora {
        System.out.println("Opción: ");
 
           int opcion = sc.nextInt();
-            
-            if (opt == 1) {
-                System.out.print("Introduce moneda: ");
-                double m = sc.nextDouble();
-                boolean m_valida = false;
-                for(int i = 0; i < mon_val.length; i++) {
-                    if (m == mon_val[i]) {
-                        m_valida = true;
-                        break;
+            if (opcion == 1) {
+        System.out.print("Introduce moneda: ");
+           double moneda = sc.nextDouble();
+
+           boolean valida = false;
+          for (double m : monedasValidas) {
+              if (Double.compare(moneda, m) == 0) {
+                      valida = true;
+                               break;
+                               
                     }
                 }
                 
